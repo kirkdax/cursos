@@ -1,0 +1,69 @@
+{
+  "nombreCentro": "JACARANDA",
+  "cursos": [
+    {
+      "nombreCurso": "1eso",
+      "unidades": [
+        {
+          "nombreUnidad": "a",
+          "alumnos": [
+            {
+              "nombreAlumno": "pepe",
+              "apellidosAlumno": "mora",
+              "idAlumnoSiguiente": 2,
+              "idAlumno": 1,
+              "notas": [
+                {
+                  "nombreAsignatura": "mates",
+                  "nota": 7.0
+                },
+                {
+                  "nombreAsignatura": "lengua",
+                  "nota": 2.0
+                },
+                {
+                  "nombreAsignatura": "musica",
+                  "nota": 9.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "asignaturas": [
+        {
+          "nombreAsig": "mates",
+          "numHoras": 8
+        },
+        {
+          "nombreAsig": "lengua",
+          "numHoras": 6
+        },
+        {
+          "nombreAsig": "musica",
+          "numHoras": 4
+        }
+      ]
+    },
+    {
+      "nombreCurso": "2eso",
+      "unidades": [
+        {
+          "nombreUnidad": "a",
+          "alumnos": []
+        }
+      ],
+      "asignaturas": []
+    },
+    {
+      "nombreCurso": "cucu",
+      "unidades": [
+        {
+          "nombreUnidad": "caca",
+          "alumnos": []
+        }
+      ],
+      "asignaturas": []
+    }
+  ]
+}

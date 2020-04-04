@@ -1,0 +1,76 @@
+{
+  "nombreCentro": "Jacaranda",
+  "cursos": [
+    {
+      "nombreCurso": "1DAW",
+      "unidades": [
+        {
+          "nombreUnidad": "A",
+          "alumnos": [
+            {
+              "nombreAlumno": "Raul",
+              "apellidosAlumno": "Morales",
+              "idAlumnoSiguiente": 2,
+              "idAlumno": 1,
+              "notas": [
+                {
+                  "nombreAsignatura": "ed",
+                  "nota": 9.0
+                },
+                {
+                  "nombreAsignatura": "programacion",
+                  "nota": 8.0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "asignaturas": [
+        {
+          "nombreAsig": "Programacion",
+          "numHoras": 6
+        },
+        {
+          "nombreAsig": "ed",
+          "numHoras": 3
+        }
+      ]
+    },
+    {
+      "nombreCurso": "1eso",
+      "unidades": [
+        {
+          "nombreUnidad": "a",
+          "alumnos": []
+        }
+      ],
+      "asignaturas": []
+    },
+    {
+      "nombreCurso": "2eso",
+      "unidades": [
+        {
+          "nombreUnidad": "b",
+          "alumnos": []
+        }
+      ],
+      "asignaturas": []
+    },
+    {
+      "nombreCurso": "3eso",
+      "unidades": [],
+      "asignaturas": []
+    },
+    {
+      "nombreCurso": "4eso",
+      "unidades": [
+        {
+          "nombreUnidad": "a",
+          "alumnos": []
+        }
+      ],
+      "asignaturas": []
+    }
+  ]
+}
