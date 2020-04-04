@@ -174,18 +174,10 @@ public class Curso {
 	// #################### ASIGNATURA #################### 
 
 	
+	
+	
+	
 	// ################## ALUMNO_UNIDAD ##################
-
-//	public void addAlumnoToCurso(String nombreAlumno, String apellidosAlumno, String nombreUnidad) throws Exception {
-//
-//		if (unidadExiste(nombreUnidad)) {
-//			throw new Exception("La unidad " + nombreUnidad + " ya está registrada.");
-//		} else {
-//			Unidad u = new Unidad(nombreUnidad);
-//			unidades.add(u);
-//
-//		}
-//	}
 
 	public boolean addAlumnoToUnidad(String nombreAlumno, String apellidosAlumno, String nombreUnidad) throws Exception {
 		boolean aux = false;
@@ -212,8 +204,34 @@ public class Curso {
 
 		return aux;
 	}
+	
+	public void borrarAlumnoDeUnidad(String nombreAlumno, String apellidosAlumno, String nombreUnidad) throws Exception {
+
+		if (!unidadExiste(nombreUnidad)) {
+			throw new Exception("La unidad " + nombreUnidad + " NO está registrada.");
+		}
+		
+		Iterator<Unidad> u = unidades.iterator();
+		Unidad elemento;
+		boolean encontrado = false;
+
+		while (u.hasNext() && !encontrado) {
+			elemento = u.next();
+
+			if (elemento.getNombreUnidad().equalsIgnoreCase(nombreUnidad)) {
+				encontrado = true;
+				
+				elemento.borrarAlumno(nombreAlumno, apellidosAlumno);
+				
+			}
+		}
+
+	}
 
 	// ################## ALUMNO_UNIDAD ##################
+	
+	
+	
 	
 	
 	// ################## NOTA_ALUMNO_UNIDAD_CURSO ##################
@@ -275,6 +293,9 @@ public class Curso {
 	
 	// ################## NOTA_ALUMNO_UNIDAD_CURSO ##################
 
+	
+	
+	
 	
 	public String listarUnidades() {
 		StringBuilder aux = new StringBuilder();

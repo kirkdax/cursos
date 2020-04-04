@@ -54,16 +54,6 @@
         }
       ],
       "asignaturas": []
-    },
-    {
-      "nombreCurso": "cucu",
-      "unidades": [
-        {
-          "nombreUnidad": "caca",
-          "alumnos": []
-        }
-      ],
-      "asignaturas": []
     }
   ]
 }

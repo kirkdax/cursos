@@ -99,6 +99,28 @@ public class Unidad {
 
 		return aux;
 	}
+	
+	public void borrarAlumno(String nombreAlumno, String apellidosAlumno) throws Exception {
+
+		if (!alumnoExiste(nombreAlumno, apellidosAlumno)) {
+			throw new Exception("El alumno " + nombreAlumno + " " + apellidosAlumno + " NO está registrado.");
+		} 
+		
+		Iterator<Alumno> a = alumnos.iterator();
+		Alumno elemento;
+		boolean encontrado = false;
+
+		while (a.hasNext() && !encontrado) {
+			elemento = a.next();
+
+			if (elemento.getNombreAlumno().equalsIgnoreCase(nombreAlumno) 
+					&& elemento.getApellidosAlumno().equalsIgnoreCase(apellidosAlumno)) {
+				encontrado = true;
+				alumnos.remove(elemento);
+			}
+		}
+		
+	}
 
 	// ###################### ALUMNO ######################
 	

@@ -130,7 +130,6 @@ public class Centro {
 		return aux.toString();
 	}
 	
-	
 	public void borrarCurso(String nombreCurso) throws Exception {
 		
 		if (!cursoExiste(nombreCurso)) {												
@@ -153,6 +152,8 @@ public class Centro {
 	
 	// ###################### CURSO ###################### 
 
+	
+	
 	
 	// ###################### UNIDAD ###################### 
 
@@ -246,6 +247,8 @@ public class Centro {
 	// #################### ASIGNATURA #################### 
 
 	
+	
+	
 	// #################### ALUMNO_UNIDAD_CURSO ####################
 
 	public void addAlumnoToCurso(String nombreAlumno, String apellidosAlumno, 
@@ -268,8 +271,31 @@ public class Centro {
 			}
 		}
 	}
+	
+	public void borrarAlumnoDeCurso(String nombreAlumno, String apellidosAlumno, 
+			String nombreUnidad, String nombreCurso) throws Exception {
+
+		if (!cursoExiste(nombreCurso)) {
+			throw new Exception("El curso " + nombreCurso + " NO está registrado");
+		}
+
+		Iterator<Curso> c = cursos.iterator();
+		Curso elemento;
+		boolean encontrado = false;
+
+		while (c.hasNext() && !encontrado) {
+			elemento = c.next();
+
+			if (elemento.getNombreCurso().equalsIgnoreCase(nombreCurso)) {
+				encontrado = true;
+				elemento.borrarAlumnoDeUnidad(nombreAlumno, apellidosAlumno, nombreUnidad);
+			}
+		}
+	}
 
 	// #################### ALUMNO_UNIDAD_CURSO ####################	
+	
+	
 	
 	
 	

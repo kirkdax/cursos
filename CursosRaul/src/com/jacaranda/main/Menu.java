@@ -43,6 +43,9 @@ public class Menu {
 			System.out.println("9. Extra --> Eliminar curso");
 			System.out.println("10. Extra --> Eliminar unidad");
 			System.out.println("11. Extra --> Eliminar asignatura");
+			System.out.println("12. Extra --> Eliminar alumno");
+			System.out.println("13. Extra --> Eliminar nota de un alumno");
+
 
 			menu = Integer.parseInt(teclado.nextLine());
 			
@@ -51,7 +54,7 @@ public class Menu {
 				guardarFichero(nombreCentro.toUpperCase() + ".json");
 				System.out.println("Hasta luego!");
 				break;
-			case 1:			
+			case 1:		//Añadir curso
 				String c1 = leerString("Introduce el curso");
 				
 				try {
@@ -61,7 +64,7 @@ public class Menu {
 				}
 
 				break;
-			case 2:		
+			case 2:		//Añadir unidad
 				String c2 = leerString("Introduce el curso");
 				String u1 = leerString("Introduce la unidad");
 
@@ -72,7 +75,7 @@ public class Menu {
 				}
 				
 				break;
-			case 3:
+			case 3:		//Añadir asignatura
 				String c3 = leerString("Introduce el curso");
 				String a1 = leerString("Introduce la asignatura");
 				int h1 = leerEntero("Introduce las horas de la asignatura");
@@ -83,7 +86,7 @@ public class Menu {
 					System.out.println(e.getMessage());
 				}
 				break;
-			case 4:
+			case 4:		//Añadir alumno
 				String c4 = leerString("Introduce el curso");
 				String u2 = leerString("Introduce la unidad");
 				String n1 = leerString("Introduce el nombre del alumno");
@@ -95,7 +98,7 @@ public class Menu {
 					System.out.println(e.getMessage());
 				}
 				break;
-			case 5:
+			case 5:		//Añadir nota a un alumno
 				String n2 = leerString("Introduce el nombre del alumno");
 				String ap2 = leerString("Introduce los apellidos del alumno");
 				String c5 = leerString("Introduce el curso");
@@ -124,7 +127,7 @@ public class Menu {
 					System.out.println(e.getMessage());
 				}
 				break;
-			case 6:
+			case 6:		//Listar todas las unidades y alumnos del centro, por cursos
 				
 				try {
 					System.out.println(jaca.listarUnidadesC());
@@ -133,7 +136,7 @@ public class Menu {
 				}
 				
 				break;
-			case 7:			
+			case 7:		//Listar todos los alumnos con todas sus notas de una unidad
 				String c6 = leerString("Introduce el curso");
 				String u4 = leerString("Introduce la unidad");
 				
@@ -144,10 +147,10 @@ public class Menu {
 				}
 				
 				break;
-			case 8:
+			case 8:		//Extra --> Mostrar cursos
 				System.out.println(jaca.mostrarCursos());
 				break;
-			case 9:
+			case 9:		//Extra --> Eliminar curso
 				String c7 = leerString("Introduce el curso para ELIMINARLO");
 				
 				try {
@@ -157,7 +160,7 @@ public class Menu {
 				}
 				
 				break;
-			case 10:
+			case 10:	//Extra --> Eliminar unidad
 				String c8 = leerString("Introduce el curso correspondiente");
 				String u5 = leerString("Introduce la unidad para ELIMINARLA");
 
@@ -168,7 +171,7 @@ public class Menu {
 				}
 				
 				break;
-			case 11:
+			case 11:	//Extra --> Eliminar asignatura
 				String c9 = leerString("Introduce el curso correspondiente");
 				String a3 = leerString("Introduce la asignatura para ELIMINARLA");
 
@@ -179,7 +182,23 @@ public class Menu {
 				}
 				
 				break;
+			case 12:	//Extra --> Eliminar alumno
+				String n3 = leerString("Introduce el nombre del alumno");
+				String ap3 = leerString("Introduce los apellidos del alumno");
+				String c10 = leerString("Introduce el curso");
+				String u6 = leerString("Introduce la unidad");
+							
+				try {
+					jaca.borrarAlumnoDeCurso(n3, ap3, u6, c10);
+				} catch (Exception e) {
+					System.out.println(e.getMessage());
+				}
 				
+				break;
+			case 13:	//Extra --> Eliminar nota de un alumno
+
+				
+				break;
 			default:
 				System.out.println("Opción no válida");
 				break;
